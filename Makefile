@@ -37,9 +37,4 @@ upload/plot/dls.png: xtra_plot.R upload/input/survey.csv upload/output/dls.txt
 	Rscript --vanilla xtra_plot.R
 
 clean:
-# working dirs
-	@rm -rf db
-	@rm -rf input
-	@rm -rf model
-	@rm -rf output
-	@rm -rf upload
+	Rscript --vanilla -e "icesTAF::clean()"
